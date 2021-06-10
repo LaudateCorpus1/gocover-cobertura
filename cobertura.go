@@ -158,8 +158,7 @@ func (pkg Package) NumLinesWithHits() (numLinesWithHits int64) {
 // HitRate returns a float32 from 0.0 to 1.0 representing what fraction of lines
 // have hits
 func (cov Coverage) HitRate() float32 {
-	result := safeDivide(float32(cov.NumLinesWithHits()), float32(cov.NumLines()))
-	return result
+	return safeDivide(float32(cov.NumLinesWithHits()), float32(cov.NumLines()))
 }
 
 // NumLines returns the number of lines
