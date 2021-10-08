@@ -69,7 +69,7 @@ func TestConvertEmpty(t *testing.T) {
 	require.NoError(t, err)
 
 	require.Equal(t, "coverage", v.XMLName.Local)
-	require.NotNil(t, v.Sources)
+	require.Nil(t, v.Sources)
 	require.Nil(t, v.Packages)
 }
 
